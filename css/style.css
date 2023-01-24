@@ -1,28 +1,28 @@
-body, ul {
+body ,ul{
 margin: 0;
 padding: 0;
 }
-#header{
-
+#logo {
+    font-size: 1rem;
+    font-weight: bolder;
+}
+#header {
     box-sizing: border-box;
     height: 70px;
     padding: 1rem;
-    display: flex;
     align-items: center;
-    justify-content: space-between;
+    display: flex;
+    justify-content:space-between;
     background-color: #5b5d5f;
     
     
 }
-#logo{
-    font-size: 1.5rem;
-    font-weight: bolder;
-    
-}
-#menu{
+
+
+#menu {
     display: flex;
     list-style: none;
-    gap: .7rem;
+    gap: .5rem;
     
     
 }
@@ -31,9 +31,10 @@ padding: 0;
     padding: .5rem;
 }
 a {
-    color: #f0f8ff;
+    color: #161616;
     text-decoration: none;
     font-family: sans-serif;
+    font-weight: bolder;
     }
 a:hover{
         background:rgba(0, 0, 0, .3);
@@ -45,33 +46,35 @@ a:hover{
   color:rgb(231, 231, 238);
 
     }
-    #btn-mobile:hover{
-background: rgba(0, 0, 0, .3);
-padding: .5rem;
-    }
 
     @media (max-width: 600px) {
      #btn-mobile {
         display: block;
     }
      #menu{
-        display: none;
+        display: block;
+        justify-content: space-between;
         position: absolute;
         width: 100%;
         top: 70px;
         right: 0px;
-        background:#5b5b5f; 
+        background:#bcbcc0; 
        height: 0;
        transition: .6s;
-        z-index: 1000;       
+        z-index: 1000; 
+        visibility: hidden;      
+        overflow-y: hidden;
     }
 
     #nav.active #menu {
         height: calc(100vh - 75px);
+        visibility:visible;
+        overflow-y: auto;
     }
-    menu a {
-        padding: 1rem 0;
+    #menu a {
+        padding:  1rem 0;
         margin: 0 1rem;
-        border-bottom: ;
+        border-bottom: 3px solid rgba(240, 233, 233, 0.3);
+    
     }
     }
